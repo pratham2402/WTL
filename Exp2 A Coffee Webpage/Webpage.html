@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Coffee Shop</title>
+        <link rel="stylesheet" href="Webpage.css">
+        <style>
+            table {
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%; 
+                border-collapse: collapse; /* Ensures borders are neat */
+            }
+            th, td{
+                border: 1px solid rgb(0, 0, 0);
+                padding: 10px; /* Adds some padding inside each cell */
+            }
+            .content-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Centers the items in the container */
+            }
+            
+        </style>
+        <script>
+            function showPrice(price) {
+    document.getElementById('coffeeRate').innerHTML = "Rate for selected coffee: $" + price;
+}
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Online Coffee Shop</h1>
+        <table style="border: 1px solid rgb(0, 0, 0); text-align: center;">
+            <tr>
+                <th>Coffee Type</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        
+            <tr>
+                <td>Espresso<Br>
+                    <img src="Espresso.png" alt="Espresso Image" style="width: 100px; height: 100px;" onclick="showPrice(2.50)">
+                </td>
+                <td>A strong black coffee brewed by<br> 
+                    forcing steam through finely ground coffee beans.
+                    <br>
+                    
+                </td>
+                <td>$2.50</td>
+            </tr>
+        
+            <tr>
+                <td>Cappuccino
+                    <img src="Cappuccino.png" alt="Cappuccino Image" style="width: 100px; height: 100px;" onclick="showPrice(3)">
+                </td>
+                <td>A coffee based drink prepared with<br> 
+                    espresso, hot milk, and steamed milk foam.
+                    <br>
+                    
+                </td>
+                <td>$3.00</td>
+            </tr>
+
+
+            <tr>
+                <td>Latte<br>
+                    <img src="Latte.png" alt="Cappuccino Image" style="width: 100px; height: 100px;" onclick="showPrice(3)">
+                </td>
+                <td>A coffee based drink prepared with<br> 
+                    espresso, hot milk, and steamed milk foam.
+                    <br>
+                    
+                </td>
+                <td>$3.00</td>
+            </tr>
+
+
+            <tr>
+                <td>Mocha<br>
+                    <img src="Mocha.png" alt="Cappuccino Image" style="width: 100px; height: 100px;" onclick="showPrice(3)">
+                </td>
+                <td>A coffee based drink prepared with<br> 
+                    espresso, hot milk, and steamed milk foam.
+                    <br>
+                    
+                </td>
+                <td>$3.00</td>
+            </tr>
+
+            <tr>
+                <td>Americano<br>
+                    <img src="Americano.png" alt="Cappuccino Image" style="width: 100px; height: 100px;" onclick="showPrice(3)">
+                </td>
+                <td>A coffee based drink prepared with<br> 
+                    espresso, hot milk, and steamed milk foam.
+                    <br>
+                    
+                </td>
+                <td>$3.00</td>
+            </tr>
+        </table>
+        <br>
+        <div class="form-group">
+            <label for="coffeeType"><b>Coffee Type:</b></label>
+            <select id="coffeeType" name="coffeeType" required>
+                <option value="">Select a coffee type</option>
+                <option value="Espresso">Espresso</option>
+                <option value="Cappuccino">Cappuccino</option>
+                <option value="Americano">Americano</option>
+                <option value="Latte">Latte</option>
+                <option value="Mocha">Mocha</option>
+            </select>
+        </div>
+        <br>
+        <p id="coffeeRate">Rate for selected coffee: </p>
+        <button class="place-order-button">Place Order</button>
+        
+    </body>
+</html>

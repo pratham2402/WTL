@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Background Color</title>
+    <style>
+        /* CSS to style the list */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click on an element to change the background color</h1>
+    <ul id="myList">
+        <li>red</li>
+        <li>green</li>
+        <li>blue</li>
+    </ul>
+
+    <script>
+        // JavaScript code to change the background color
+        var listItems = document.querySelectorAll("#myList li");
+        for (var i = 0; i < listItems.length; i++) {
+            listItems[i].addEventListener("click", function() {
+                document.body.style.backgroundColor = this.innerHTML;
+            });
+        }
+    </script>
+</body>
+</html>

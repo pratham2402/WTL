@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            text-align: center;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Input Form</h1>
+        <form onsubmit="displayMessage(event)">
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" name="name">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        function displayMessage(event) {
+            event.preventDefault(); // Prevent form submission
+            var name = document.getElementById("name").value;
+            var messageDiv = document.getElementById("message");
+            messageDiv.textContent = "Hello " + name + "!" + " Welcome to the world of Javascript!";
+            
+        }
+    </script>
+</body>
+</html>

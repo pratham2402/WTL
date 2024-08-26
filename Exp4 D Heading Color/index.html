@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heading Color</title>
+    <style>
+        /* Add some styles to the heading */
+        #heading {
+            font-size: 24px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Heading Color</h1>
+    <label for="colorDropdown">Select Color:</label>
+    <select id="colorDropdown">
+        <option value="black" data-bgcolor="white">Black</option>
+        <option value="red" data-bgcolor="white">Red</option>
+        <option value="green" data-bgcolor="white">Green</option>
+        <option value="blue" data-bgcolor="white">Blue</option>
+        <option value="white" data-bgcolor="black">White</option>
+        <option value="yellow" data-bgcolor="black">Yellow</option>
+        <option value="orange" data-bgcolor="black">Orange</option>
+        <option value="purple" data-bgcolor="black">Purple</option>
+    </select>
+
+    <script>
+        // Get the dropdown element
+        const dropdown = document.getElementById('colorDropdown');
+
+        // Get the heading element
+        const heading = document.getElementById('heading');
+
+        // Add an event listener to the dropdown
+        dropdown.addEventListener('change', function() {
+            // Get the selected font color and background color
+            const fontColor = dropdown.options[dropdown.selectedIndex].value;
+            const bgColor = dropdown.options[dropdown.selectedIndex].dataset.bgcolor;
+
+            // Check if the font color and background color are the same
+            if (fontColor !== bgColor) {
+                // Apply the font color and background color to the heading
+                heading.style.color = fontColor;
+                heading.style.backgroundColor = bgColor;
+            }
+        });
+    </script>
+</body>
+</html>

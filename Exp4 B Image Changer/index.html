@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Changer</title>
+    <style>
+        #myImage {
+            width: 200px; /* Adjust the width as needed */
+            height: auto; /* Automatically adjust the height while maintaining aspect ratio */
+        }
+    </style>
+</head>
+<script>
+    var images = ["old_image.jpg", "new_image.jpg", "mars.jpg"]; // Add more image URLs if needed
+    var currentIndex = 0;
+
+    function changeImage() {
+        var image = document.getElementById("myImage");
+        currentIndex = (currentIndex + 1) % images.length;
+        image.src = images[currentIndex];
+    }
+</script>
+<body>
+    <h1>Image Changer</h1>
+    <img id="myImage" src="old_image.jpg" alt="Old Image">
+    <br>
+    <button onclick="changeImage()">Change Image</button>
+</body>
+</html>

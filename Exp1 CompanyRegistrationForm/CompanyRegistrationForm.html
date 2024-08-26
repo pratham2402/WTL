@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Company Registration Form</title>
+    <link rel="stylesheet" href="CompanyRegistrationForm.css">
+</head>
+<body>
+    <!-- Added a class for styling the form container -->
+    <div class="form-container">
+        <h1>Company Registration Form</h1>
+        <form>
+            <div class="form-group">
+                <label for="companyName"><b>Company Name:</b></label>
+                <input type="text" id="companyName" name="companyName" required style="width: 300px;">
+                <p class="info-text">Enter the name of your company</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="email"><b>Email:</b></label>
+                <input type="email" id="email" name="email" required style="width: 300px;">
+                <p class="info-text">Enter your email address</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="country"><b>Country:</b></label>
+                <select id="country" name="country" required>
+                    <option value="">Select a country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                    <option value="Australia">Australia</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <p class="info-text">Select your country</p>
+            </div>
+            
+            <div class="form-group">
+                <input type="register" value="Register" class="submit-btn">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

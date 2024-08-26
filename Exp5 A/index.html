@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Append Row Example</title>
+    <script>
+        function appendRow() {
+            var table = document.getElementById("myTable");
+            var row = table.insertRow(table.rows.length);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = "New Cell 1";
+            cell2.innerHTML = "New Cell 2";
+        }
+    </script>
+</head>
+<body>
+    <table id="myTable">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+        </tr>
+    </table>
+    <button onclick="appendRow()">Add Row</button>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Array Management</title>
+    <script>
+        function addColor() {
+            const colors = ["Red", "Green", "Blue"];
+            const newColor = document.getElementById('colorInput').value;
+            
+            if (newColor && !colors.includes(newColor)) {
+                colors.push(newColor);
+                document.getElementById('output').innerText = `Color added! The colors array is now: [${colors.join(", ")}]`;
+            } else {
+                document.getElementById('output').innerText = `The color "${newColor}" is already in the array or the input is empty.`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Color Array Management</h1>
+    <label for="colorInput">Enter a color:</label>
+    <input type="text" id="colorInput">
+    <button onclick="addColor()">Add Color</button>
+    <p id="output"></p>
+</body>
+</html>

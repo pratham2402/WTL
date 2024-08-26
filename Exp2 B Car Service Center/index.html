@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertex Car Service Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            padding: 1rem;
+            overflow: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #444;
+            padding: 0.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .showcase {
+            background: url('car-workshop.jpg') no-repeat center center/cover;
+            height: 200px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .showcase h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            gap: 1rem;
+            padding: 1rem 0;
+        }
+
+        .content img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .package {
+            background: #fff;
+            padding: 0.5rem;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 0.5rem 0;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Vertex Car Service Center</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="showcase">
+        <h1>Welcome to Vertex Car Service Center</h1>
+    </section>
+
+    <section class="container">
+        <h2>Our Services</h2>
+        <div class="content">
+            <div class="package">
+                <h3>Basic Package</h3>
+                <p>Includes oil change, tire rotation, and a 50-point inspection.</p>
+                <img src="basic-package.jpg" alt="Basic Package">
+            </div>
+            <div class="package">
+                <h3>Standard Package</h3>
+                <p>Includes everything in the Basic Package plus brake inspection and battery check.</p>
+                <img src="standard-package.jpg" alt="Standard Package">
+            </div>
+            <div class="package">
+                <h3>Premium Package</h3>
+                <p>Includes everything in the Standard Package plus full interior and exterior detailing.</p>
+                <img src="premium-package.jpg" alt="Premium Package">
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Car Workshop Gallery</h2>
+        <div class="content">
+            <img src="workshop1.jpg" alt="Car Workshop 1">
+            <img src="workshop2.jpg" alt="Car Workshop 2">
+            <img src="workshop3.jpg" alt="Car Workshop 3">
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Car Accessories</h2>
+        <div class="content">
+            <img src="accessory1.jpg" alt="Car Accessory 1">
+            <img src="accessory2.jpg" alt="Car Accessory 2">
+            <img src="accessory3.jpg" alt="Car Accessory 3">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Vertex Car Service Center. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

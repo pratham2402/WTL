@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Color Change</title>
+    <style>
+        .button {
+            padding: 10px 20px;
+            background-color: #ccc;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <button class="button" onmouseover="changeColor(this, '#ff0000')" onmouseout="changeColor(this, '#ccc')" onclick="changeColor(this, '#00ff00')">Button</button>
+
+    <script>
+        function changeColor(element, color) {
+            element.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+main {
+    padding-bottom: 60px; /* Add padding to the bottom to prevent footer overlap */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+/* Image Styles */
+.image-size, .stock-images {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stock-images {
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Flexbox Container */
+.image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+/* Figure and Caption Styles */
+figure {
+    margin: 10px;
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Header Styles */
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes rollFlower {
+    0% {
+        left: -100px; /* Start off-screen */
+        transform: translateY(-50%) rotate(0deg); /* Initial rotation */
+    }
+    100% {
+        left: 100%; /* Move off-screen to the right */
+        transform: translateY(-50%) rotate(360deg); /* Full rotation */
+    }
+}
+
+.flower-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+.flower-animation {
+    position: absolute;
+    top: 50%;
+    left: -100px; /* Start the animation off-screen */
+    transform: translateY(-50%);
+    animation: rollFlower 10s linear infinite; /* Adjust duration and timing as needed */
+    z-index: 1; /* Lower z-index to ensure it is behind the text */
+}
